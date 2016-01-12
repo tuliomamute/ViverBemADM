@@ -143,11 +143,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201601120231280_FirstMigrate_Tulio.cs" />
-    <Compile Include="Migrations\201601120231280_FirstMigrate_Tulio.Designer.cs">
-      <DependentUpon>201601120231280_FirstMigrate_Tulio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\NewsPaperSizes.cs" />
     <Compile Include="Models\PaymentForm.cs" />
@@ -210,11 +205,6 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-2.2.0.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201601120231280_FirstMigrate_Tulio.resx">
-      <DependentUpon>201601120231280_FirstMigrate_Tulio.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

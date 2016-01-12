@@ -27,7 +27,7 @@ namespace ViverBemADM.Models
         public double PromotionalPrice { get; set; }
 
         [DisplayName("Nome")]
-        [MaxLength(10, ErrorMessage = "Tamanho máximo excedido!")]
+        [MaxLength(20, ErrorMessage = "Tamanho máximo excedido!")]
         public string SizeName { get; set; }
 
         public virtual ICollection<Sales> Sales { get; set; }

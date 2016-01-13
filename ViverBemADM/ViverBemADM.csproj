@@ -198,6 +198,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\NewsPaperSizes\Create.cshtml" />
     <Content Include="Views\NewsPaperSizes\Index.cshtml" />
+    <Content Include="Views\NewsPaperSizes\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

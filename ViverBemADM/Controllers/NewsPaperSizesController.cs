@@ -28,7 +28,8 @@ namespace ViverBemADM.Controllers
         // GET: NewsPaperSizes/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var model = viverbembd.NewsPaperSizes.Select(x => x.NewsPaperSizesID == id);
+            return PartialView(model);
         }
 
         // GET: NewsPaperSizes/Create

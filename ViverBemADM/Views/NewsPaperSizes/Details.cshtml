@@ -1,0 +1,52 @@
+﻿@model ViverBemADM.Models.NewsPaperSizes
+
+<div>
+    <h4>NewsPaperSizes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Height)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Height)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Width)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Width)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NormalPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NormalPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PromotionalPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PromotionalPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SizeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SizeName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NewsPaperSizesID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

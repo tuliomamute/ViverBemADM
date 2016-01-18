@@ -17,7 +17,7 @@ namespace ViverBemADM.Controllers
         }
 
         #region Get Methods
-            
+
         // GET: NewsPaperSizes
         public ActionResult Index()
         {
@@ -28,8 +28,8 @@ namespace ViverBemADM.Controllers
         // GET: NewsPaperSizes/Details/5
         public ActionResult Details(int id)
         {
-            var model = viverbembd.NewsPaperSizes.Select(x => x.NewsPaperSizesID == id);
-            return PartialView(model);
+            var model = viverbembd.NewsPaperSizes.Find(id);
+            return View(model);
         }
 
         // GET: NewsPaperSizes/Create
@@ -41,13 +41,17 @@ namespace ViverBemADM.Controllers
         // GET: NewsPaperSizes/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var model = viverbembd.NewsPaperSizes.Find(id);
+
+            return View("Edit", model);
         }
 
         // GET: NewsPaperSizes/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var model = viverbembd.NewsPaperSizes.Find(id);
+            return View("Delete", model);
+
         }
         #endregion
 
@@ -61,6 +65,7 @@ namespace ViverBemADM.Controllers
                 // TODO: Add insert logic here
                 viverbembd.NewsPaperSizes.Add(newspapersizes);
                 viverbembd.SaveChanges();
+
                 return RedirectToAction("Index");
             }
             catch
@@ -71,15 +76,20 @@ namespace ViverBemADM.Controllers
 
         // POST: NewsPaperSizes/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(NewsPaperSizes model)
         {
             try
             {
-                // TODO: Add update logic here
+                if (ModelState.IsValid)
+                {
+                    viverbembd.Entry(model).State = System.Data.Entity.EntityState.Modified;
+                    viverbembd.SaveChanges();
 
-                return RedirectToAction("Index");
+                    return RedirectToAction("Index");
+                }
+                return View();
             }
-            catch
+            catch (Exception ex)
             {
                 return View();
             }
@@ -87,11 +97,14 @@ namespace ViverBemADM.Controllers
 
         // POST: NewsPaperSizes/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(NewsPaperSizes model)
         {
             try
             {
                 // TODO: Add delete logic here
+
+                viverbembd.NewsPaperSizes.Remove(model);
+                viverbembd.SaveChanges();
 
                 return RedirectToAction("Index");
             }

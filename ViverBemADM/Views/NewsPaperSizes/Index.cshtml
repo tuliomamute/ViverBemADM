@@ -7,9 +7,14 @@
 <h2>Início - Tamanho dos Anúncios</h2>
 
 <p>
-    @*@Html.ActionLink("Create New", "Create", new { @class = "btn btn-primary" })*@
     @Html.ActionLink("Inserir Novo", "Create", null, new { @class = "btn btn-primary" })
 </p>
+
+<div id='DetailsModal' class='modal hide fade in' data-url='@Url.Action("Details")'>
+    <div id='ModalContainer'>
+    </div>
+</div>
+
 <table class="table table-hover">
     <tr>
         <th>
@@ -50,7 +55,7 @@
             </td>
             <td>
                 @Html.ActionLink("Editar", "Edit", new { id = item.NewsPaperSizesID }, new { @class = "btn btn-success" }) |
-                @Html.ActionLink("Detalhes", "Details", new { id = item.NewsPaperSizesID }, new { @class = "btn btn-warning  ", @onclick = "ShowModal();" }) |
+                @Html.ActionLink("Detalhes", "Details", new { id = item.NewsPaperSizesID }, new { @class = "btn btn-warning", onclick = string.Format("return onmodalclick({0})", item.NewsPaperSizesID) }) |
                 @Html.ActionLink("Excluir", "Delete", new { id = item.NewsPaperSizesID }, new { @class = "btn btn-danger" })
             </td>
         </tr>

@@ -143,6 +143,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201601181950069_FirstMigration.cs" />
+    <Compile Include="Migrations\201601181950069_FirstMigration.Designer.cs">
+      <DependentUpon>201601181950069_FirstMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601181951137_ChangeMaxlenght.cs" />
+    <Compile Include="Migrations\201601181951137_ChangeMaxlenght.Designer.cs">
+      <DependentUpon>201601181951137_ChangeMaxlenght.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\NewsPaperSizes.cs" />
     <Compile Include="Models\PaymentForm.cs" />
@@ -199,13 +208,24 @@
     <Content Include="Views\NewsPaperSizes\Create.cshtml" />
     <Content Include="Views\NewsPaperSizes\Index.cshtml" />
     <Content Include="Views\NewsPaperSizes\Details.cshtml" />
+    <Content Include="Views\NewsPaperSizes\Edit.cshtml" />
+    <Content Include="Views\NewsPaperSizes\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Clients\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-2.2.0.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201601181950069_FirstMigration.resx">
+      <DependentUpon>201601181950069_FirstMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601181951137_ChangeMaxlenght.resx">
+      <DependentUpon>201601181951137_ChangeMaxlenght.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

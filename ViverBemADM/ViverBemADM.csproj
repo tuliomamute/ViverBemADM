@@ -151,6 +151,14 @@
     <Compile Include="Migrations\201601181951137_ChangeMaxlenght.Designer.cs">
       <DependentUpon>201601181951137_ChangeMaxlenght.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201601191719194_ChangeSomeFieldToNotNull.cs" />
+    <Compile Include="Migrations\201601191719194_ChangeSomeFieldToNotNull.Designer.cs">
+      <DependentUpon>201601191719194_ChangeSomeFieldToNotNull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601191805226_SetSomeFieldsToNullable.cs" />
+    <Compile Include="Migrations\201601191805226_SetSomeFieldsToNullable.Designer.cs">
+      <DependentUpon>201601191805226_SetSomeFieldsToNullable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\NewsPaperSizes.cs" />
@@ -213,7 +221,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Clients\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -225,6 +232,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201601181951137_ChangeMaxlenght.resx">
       <DependentUpon>201601181951137_ChangeMaxlenght.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601191719194_ChangeSomeFieldToNotNull.resx">
+      <DependentUpon>201601191719194_ChangeSomeFieldToNotNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601191805226_SetSomeFieldsToNullable.resx">
+      <DependentUpon>201601191805226_SetSomeFieldsToNullable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -62,11 +62,16 @@ namespace ViverBemADM.Controllers
         {
             try
             {
-                // TODO: Add insert logic here
-                viverbembd.NewsPaperSizes.Add(newspapersizes);
-                viverbembd.SaveChanges();
+                if (ModelState.IsValid)
+                {
+                    // TODO: Add insert logic here
+                    viverbembd.NewsPaperSizes.Add(newspapersizes);
+                    viverbembd.SaveChanges();
 
-                return RedirectToAction("Index");
+                    return RedirectToAction("Index");
+                }
+                return View();
+
             }
             catch
             {

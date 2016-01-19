@@ -9,8 +9,11 @@ namespace ViverBemADM.Models
 {
     public class Sales
     {
-        [Key]
+        [Key]      
         public int SalesID { get; set; }
+
+        [DataType(DataType.Currency)]
+        [DisplayFormat(DataFormatString = "{0:C2}")]
         public double SaleValue { get; set; }
         public int PaymentTime { get; set; }
         public int SaleSituation { get; set; }

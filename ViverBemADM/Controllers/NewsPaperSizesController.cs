@@ -103,12 +103,12 @@ namespace ViverBemADM.Controllers
             {
                 // TODO: Add delete logic here
 
-                viverbembd.NewsPaperSizes.Remove(model);
+                viverbembd.Entry(model).State = System.Data.Entity.EntityState.Deleted;
                 viverbembd.SaveChanges();
 
                 return RedirectToAction("Index");
             }
-            catch
+            catch (Exception ex)
             {
                 return View();
             }

@@ -7,13 +7,13 @@ namespace ViverBemADM.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class ChangeSomeFieldToNotNull : IMigrationMetadata
+    public sealed partial class FristCommit : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ChangeSomeFieldToNotNull));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(FristCommit));
         
         string IMigrationMetadata.Id
         {
-            get { return "201601191719194_ChangeSomeFieldToNotNull"; }
+            get { return "201601202033144_FristCommit"; }
         }
         
         string IMigrationMetadata.Source

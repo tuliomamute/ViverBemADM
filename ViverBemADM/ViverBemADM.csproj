@@ -159,6 +159,10 @@
     <Compile Include="Migrations\201601191805226_SetSomeFieldsToNullable.Designer.cs">
       <DependentUpon>201601191805226_SetSomeFieldsToNullable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201601200333234_ChangeValueType.cs" />
+    <Compile Include="Migrations\201601200333234_ChangeValueType.Designer.cs">
+      <DependentUpon>201601200333234_ChangeValueType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\NewsPaperSizes.cs" />
@@ -238,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201601191805226_SetSomeFieldsToNullable.resx">
       <DependentUpon>201601191805226_SetSomeFieldsToNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601200333234_ChangeValueType.resx">
+      <DependentUpon>201601200333234_ChangeValueType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

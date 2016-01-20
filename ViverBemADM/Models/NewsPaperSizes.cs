@@ -14,13 +14,11 @@ namespace ViverBemADM.Models
         public int NewsPaperSizesID { get; set; }
 
         [DisplayName("Altura")]
-        [DataType(DataType.Currency)]
         [DisplayFormat(DataFormatString = "{0:C2}")]
         [Required(ErrorMessage = "Obrigatório informar a Altura")]
         public decimal Height { get; set; }
 
         [DisplayName("Largura")]
-        [DataType(DataType.Currency)]
         [DisplayFormat(DataFormatString = "{0:C2}")]
         [Required(ErrorMessage = "Obrigatório informar a Largura")]
         public decimal Width { get; set; }

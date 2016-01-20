@@ -107,14 +107,11 @@ namespace ViverBemADM.Controllers
             try
             {
                 // TODO: Add delete logic here
-                if (ModelState.IsValid)
-                {
-                    viverbembd.Entry(model).State = System.Data.Entity.EntityState.Deleted;
-                    viverbembd.SaveChanges();
+                viverbembd.Entry(model).State = System.Data.Entity.EntityState.Deleted;
+                viverbembd.SaveChanges();
 
-                    return RedirectToAction("Index");
-                }
-                return View();
+                return RedirectToAction("Index");
+
             }
             catch (Exception ex)
             {

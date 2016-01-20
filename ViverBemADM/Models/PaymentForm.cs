@@ -7,7 +7,7 @@ using System.ComponentModel;
 
 namespace ViverBemADM.Models
 {
-    public class PaymentForm
+    public class PaymentForm    
     {
         [Key]
         public int PaymentFormID { get; set; }

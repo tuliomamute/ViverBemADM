@@ -9,56 +9,45 @@
 <p>
     @Html.ActionLink("Inserir Novo", "Create", null, new { @class = "btn btn-primary" })
 </p>
+<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <table class="table table-hover">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.SizeName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NormalPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PromotionalPrice)
+                </th>
+                <th>
+                    Ações
+                </th>
+            </tr>
 
-<div id='DetailsModal' class='modal hide fade in' data-url='@Url.Action("Details")'>
-    <div id='ModalContainer'>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SizeName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NormalPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PromotionalPrice)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Editar", "Edit", new { id = item.NewsPaperSizesID }, new { @class = "btn btn-success" })
+                        @Html.ActionLink("Detalhes", "Details", new { id = item.NewsPaperSizesID }, new { @class = "btn btn-warning" })
+                        @Html.ActionLink("Excluir", "Delete", new { id = item.NewsPaperSizesID }, new { @class = "btn btn-danger" })
+                    </td>
+                </tr>
+            }
+
+        </table>
+
     </div>
 </div>
-
-<table class="table table-hover">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Height)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Width)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NormalPrice)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PromotionalPrice)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SizeName)
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Height)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Width)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NormalPrice)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PromotionalPrice)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SizeName)
-            </td>
-            <td>
-                @Html.ActionLink("Editar", "Edit", new { id = item.NewsPaperSizesID }, new { @class = "btn btn-success" }) |
-                @Html.ActionLink("Detalhes", "Details", new { id = item.NewsPaperSizesID }, new { @class = "btn btn-warning", onclick = string.Format("return onmodalclick({0})", item.NewsPaperSizesID) }) |
-                @Html.ActionLink("Excluir", "Delete", new { id = item.NewsPaperSizesID }, new { @class = "btn btn-danger" })
-            </td>
-        </tr>
-    }
-
-</table>

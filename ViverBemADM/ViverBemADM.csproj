@@ -148,6 +148,10 @@
     <Compile Include="Migrations\201601202033144_FristCommit.Designer.cs">
       <DependentUpon>201601202033144_FristCommit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201601251549110_ChangeFieldTypes.cs" />
+    <Compile Include="Migrations\201601251549110_ChangeFieldTypes.Designer.cs">
+      <DependentUpon>201601251549110_ChangeFieldTypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\NewsPaperSizes.cs" />
@@ -174,6 +178,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Properties\PublishProfiles\ViverBemPublicado.pubxml" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -207,10 +212,14 @@
     <Content Include="Views\NewsPaperSizes\Details.cshtml" />
     <Content Include="Views\NewsPaperSizes\Edit.cshtml" />
     <Content Include="Views\NewsPaperSizes\Delete.cshtml" />
+    <Content Include="Views\Client\Index.cshtml" />
+    <Content Include="Views\Client\Details.cshtml" />
+    <Content Include="Views\Client\Create.cshtml" />
+    <Content Include="Views\Client\Edit.cshtml" />
+    <Content Include="Views\Client\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Client\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -219,6 +228,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201601202033144_FristCommit.resx">
       <DependentUpon>201601202033144_FristCommit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601251549110_ChangeFieldTypes.resx">
+      <DependentUpon>201601251549110_ChangeFieldTypes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

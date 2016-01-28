@@ -152,6 +152,10 @@
     <Compile Include="Migrations\201601251549110_ChangeFieldTypes.Designer.cs">
       <DependentUpon>201601251549110_ChangeFieldTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201601281111127_ChangeMaxLenghtField_Client.cs" />
+    <Compile Include="Migrations\201601281111127_ChangeMaxLenghtField_Client.Designer.cs">
+      <DependentUpon>201601281111127_ChangeMaxLenghtField_Client.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\NewsPaperSizes.cs" />
@@ -231,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201601251549110_ChangeFieldTypes.resx">
       <DependentUpon>201601251549110_ChangeFieldTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601281111127_ChangeMaxLenghtField_Client.resx">
+      <DependentUpon>201601281111127_ChangeMaxLenghtField_Client.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

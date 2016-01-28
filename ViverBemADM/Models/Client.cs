@@ -13,7 +13,7 @@ namespace ViverBemADM.Models
         [Key]
         public int ClientID { get; set; }
 
-        [DisplayName("Nome do Cliente")]
+        [DisplayName("Nome")]
         [Required(ErrorMessage = "Obrigado a informar o Nome do Cliente")]
         public string Name { get; set; }
 
@@ -23,6 +23,7 @@ namespace ViverBemADM.Models
 
         [DisplayName("Nome do Contato")]
         [Required(ErrorMessage = "Obrigado a informar o Nome do Contato")]
+        [MaxLength(20, ErrorMessage = "Tamanho máximo é de 20 caracteres!")]
         public string ContactName { get; set; }
 
         [DisplayName("Telefone do Contato")]

@@ -141,6 +141,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\NewsPaperSizesController.cs" />
+    <Compile Include="Controllers\SellersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -155,6 +156,10 @@
     <Compile Include="Migrations\201601281111127_ChangeMaxLenghtField_Client.cs" />
     <Compile Include="Migrations\201601281111127_ChangeMaxLenghtField_Client.Designer.cs">
       <DependentUpon>201601281111127_ChangeMaxLenghtField_Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601281500028_AddingNewField_Sellers.cs" />
+    <Compile Include="Migrations\201601281500028_AddingNewField_Sellers.Designer.cs">
+      <DependentUpon>201601281500028_AddingNewField_Sellers.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Client.cs" />
@@ -221,6 +226,11 @@
     <Content Include="Views\Client\Create.cshtml" />
     <Content Include="Views\Client\Edit.cshtml" />
     <Content Include="Views\Client\Delete.cshtml" />
+    <Content Include="Views\Sellers\Create.cshtml" />
+    <Content Include="Views\Sellers\Delete.cshtml" />
+    <Content Include="Views\Sellers\Details.cshtml" />
+    <Content Include="Views\Sellers\Edit.cshtml" />
+    <Content Include="Views\Sellers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -238,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201601281111127_ChangeMaxLenghtField_Client.resx">
       <DependentUpon>201601281111127_ChangeMaxLenghtField_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601281500028_AddingNewField_Sellers.resx">
+      <DependentUpon>201601281500028_AddingNewField_Sellers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

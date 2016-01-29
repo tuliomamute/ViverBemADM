@@ -1,0 +1,54 @@
+﻿@model ViverBemADM.Models.Sellers
+
+@{
+    ViewBag.Title = "Excluir - Vendedores";
+}
+
+<h2>Excluir - Vendedores</h2>
+
+<h3>Tem certeza que deseja excluir este vendedor?</h3>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            @Html.HiddenFor(model => model.SellersID)
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SellerName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SellerName)
+                @Html.HiddenFor(model => model.SellerName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SellerPhone)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SellerPhone)
+                @Html.HiddenFor(model => model.SellerPhone)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SellerEmail)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SellerEmail)
+                @Html.HiddenFor(model => model.SellerEmail)
+            </dd>
+
+        </dl>
+
+
+        <div class="form-actions no-color">
+            @Html.ActionLink("Retornar a Lista", "Index",null, new { @class = "btn btn-primary" })
+            <input type="submit" value="Excluir" class="btn btn-success" />
+        </div>
+    </div>
+}

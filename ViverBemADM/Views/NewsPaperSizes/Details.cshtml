@@ -1,11 +1,20 @@
 ﻿@model ViverBemADM.Models.NewsPaperSizes
 
-<h2>Detalhes - Tamanho dos Anúncios</h2>
+@{ ViewBag.Title = "Detalhes - Tamanho de Anúncio";}
 
+<h2>Detalhes - Tamanho dos Anúncios</h2>
 
 <div>
     <hr />
     <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SizeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SizeName)
+        </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.Height)
         </dt>
@@ -36,14 +45,6 @@
 
         <dd>
             @Html.DisplayFor(model => model.PromotionalPrice)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.SizeName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SizeName)
         </dd>
 
     </dl>

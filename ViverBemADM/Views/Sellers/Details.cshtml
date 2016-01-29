@@ -1,0 +1,43 @@
+﻿@model ViverBemADM.Models.Sellers
+
+@{
+    ViewBag.Title = "Detalhes - Vendedores";
+}
+
+<h2>Detalhes - Vendedor</h2>
+
+<div>
+    <h4>Sellers</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SellerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SellerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SellerPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SellerPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SellerEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SellerEmail)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Retornar a Lista", "Index",null, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Editar", "Edit", new { id = Model.SellersID }, new { @class = "btn btn-success" })
+
+</p>

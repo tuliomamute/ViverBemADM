@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
 using System.Linq;
-using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ViverBemADM.Models;
@@ -12,27 +9,27 @@ namespace ViverBemADM.Controllers
 {
     public class SellersController : Controller
     {
-        private ViverBemADMContext db = new ViverBemADMContext();
+        private ViverBemADMContext db { get; set; }
+
+        public SellersController()
+        {
+            db = new ViverBemADMContext();
+        }
+
+        #region Get Methods
 
         // GET: Sellers
         public ActionResult Index()
         {
-            return View(db.Sellers.ToList());
+            var model = db.Sellers.ToList();
+            return View(model);
         }
 
         // GET: Sellers/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Sellers sellers = db.Sellers.Find(id);
-            if (sellers == null)
-            {
-                return HttpNotFound();
-            }
-            return View(sellers);
+            var model = db.Sellers.Find(id);
+            return View(model);
         }
 
         // GET: Sellers/Create
@@ -41,87 +38,87 @@ namespace ViverBemADM.Controllers
             return View();
         }
 
-        // POST: Sellers/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "SellersID,SellerName,SellerPhone,SellerEmail")] Sellers sellers)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Sellers.Add(sellers);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-
-            return View(sellers);
-        }
-
         // GET: Sellers/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Sellers sellers = db.Sellers.Find(id);
-            if (sellers == null)
-            {
-                return HttpNotFound();
-            }
-            return View(sellers);
-        }
+            var model = db.Sellers.Find(id);
 
-        // POST: Sellers/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "SellersID,SellerName,SellerPhone,SellerEmail")] Sellers sellers)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(sellers).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(sellers);
+            return View("Edit", model);
         }
 
         // GET: Sellers/Delete/5
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(int id)
         {
-            if (id == null)
+            var model = db.Sellers.Find(id);
+            return View("Delete", model);
+
+        }
+        #endregion
+
+        #region Post Methods
+        // POST: Sellers/Create
+        [HttpPost]
+        public ActionResult Create(Sellers model)
+        {
+            try
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                if (ModelState.IsValid)
+                {
+                    // TODO: Add insert logic here
+                    db.Sellers.Add(model);
+                    db.SaveChanges();
+
+                    return RedirectToAction("Index");
+                }
+                return View();
+
             }
-            Sellers sellers = db.Sellers.Find(id);
-            if (sellers == null)
+            catch (Exception ex)
             {
-                return HttpNotFound();
+                return View();
             }
-            return View(sellers);
+        }
+
+        // POST: Sellers/Edit/5
+        [HttpPost]
+        public ActionResult Edit(Sellers model)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    db.Entry(model).State = System.Data.Entity.EntityState.Modified;
+                    db.SaveChanges();
+
+                    return RedirectToAction("Index");
+                }
+                return View();
+            }
+            catch (Exception ex)
+            {
+                return View();
+            }
         }
 
         // POST: Sellers/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        [HttpPost]
+        public ActionResult Delete(Sellers model)
         {
-            Sellers sellers = db.Sellers.Find(id);
-            db.Sellers.Remove(sellers);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            try
+            {
+                // TODO: Add delete logic here
+                db.Entry(model).State = System.Data.Entity.EntityState.Deleted;
+                db.SaveChanges();
+
+                return RedirectToAction("Index");
+
+            }
+            catch (Exception ex)
+            {
+                return View();
+            }
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+        #endregion
     }
 }

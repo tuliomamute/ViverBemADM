@@ -141,6 +141,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\NewsPaperSizesController.cs" />
+    <Compile Include="Controllers\PaymentFormsController.cs" />
     <Compile Include="Controllers\SellersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -231,6 +232,11 @@
     <Content Include="Views\Sellers\Details.cshtml" />
     <Content Include="Views\Sellers\Edit.cshtml" />
     <Content Include="Views\Sellers\Index.cshtml" />
+    <Content Include="Views\PaymentForms\Create.cshtml" />
+    <Content Include="Views\PaymentForms\Delete.cshtml" />
+    <Content Include="Views\PaymentForms\Details.cshtml" />
+    <Content Include="Views\PaymentForms\Edit.cshtml" />
+    <Content Include="Views\PaymentForms\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

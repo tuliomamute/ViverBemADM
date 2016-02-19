@@ -1,82 +1,81 @@
 ﻿@model ViverBemADM.Models.Client
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalhes - Cliente";
 }
 
-<h2>Detalhes - Cliente</h2>
+<h2>@ViewBag.Title</h2>
 
-<div>
-    <h4>Client</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Address)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Address)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Address)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ContactName)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.ContactName)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ContactName)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.ContactName)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ContactPhone)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.ContactPhone)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ContactPhone)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.ContactPhone)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ContactEmail)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.ContactEmail)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ContactEmail)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.ContactEmail)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CNPJ)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.CNPJ)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.CNPJ)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.CNPJ)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.StateInscrition)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.StateInscrition)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.StateInscrition)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.StateInscrition)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TownInscrition)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.TownInscrition)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.TownInscrition)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.TownInscrition)
+            </dd>
 
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Retornar a Lista", "Index", null, new { @class = "btn btn-primary" })
-    @Html.ActionLink("Editar", "Edit", new { id = Model.ClientID }, new { @class = "btn btn-success" }) 
-</p>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Retornar a Lista", "Index", null, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Editar", "Edit", new { id = Model.ClientID }, new { @class = "btn btn-success" })
+    </p>

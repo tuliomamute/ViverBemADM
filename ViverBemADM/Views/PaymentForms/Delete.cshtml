@@ -4,7 +4,7 @@
     ViewBag.Title = "Excluir - Forma de Pagamento";
 }
 
-<h2>Excluir - Forma de Pagamento</h2>
+<h2>@ViewBag.Title</h2>
 
 <h3>Tem certeza que deseja excluir essa forma de pagamento?</h3>
 @using (Html.BeginForm())
@@ -26,9 +26,10 @@
         </dl>
 
         <div class="form-actions no-color">
-            <input type="submit" value="Excluir" class="btn btn-default" />
-            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Retornar a Lista", "Index", null, new { @class = "btn btn-primary" })
+            <input type="submit" value="Excluir" class="btn btn-success" />
         </div>
 
-        }
+
     </div>
+}

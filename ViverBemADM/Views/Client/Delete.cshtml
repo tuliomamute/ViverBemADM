@@ -1,99 +1,99 @@
 ﻿@model ViverBemADM.Models.Client
 
 @{
-    ViewBag.Title = "Excluir";
+    ViewBag.Title = "Excluir - Cliente";
 }
-<h2>Excluir - Cliente</h2>
+<h2>@ViewBag.Title</h2>
 
-<h3>Tem certeza que deseja excluir este cliente?</h3>
+    <h3>Tem certeza que deseja excluir este cliente?</h3>
 
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-    <div>
-        <hr />
-        <dl class="dl-horizontal">
-            @Html.HiddenFor(model => model.ClientID)
-
-
-            <dt>
-                @Html.DisplayNameFor(model => model.Name)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Name)
-                @Html.HiddenFor(model => model.Name)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.Address)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Address)
-                @Html.HiddenFor(model => model.Address)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.ContactName)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.ContactName)
-                @Html.HiddenFor(model => model.ContactName)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.ContactPhone)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.ContactPhone)
-                @Html.HiddenFor(model => model.ContactPhone)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.ContactEmail)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.ContactEmail)
-                @Html.HiddenFor(model => model.ContactEmail)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.CNPJ)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.CNPJ)
-                @Html.HiddenFor(model => model.CNPJ)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.StateInscrition)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.StateInscrition)
-                @Html.HiddenFor(model => model.StateInscrition)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.TownInscrition)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.TownInscrition)
-                @Html.HiddenFor(model => model.TownInscrition)
-            </dd>
-
-        </dl>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div>
+            <hr />
+            <dl class="dl-horizontal">
+                @Html.HiddenFor(model => model.ClientID)
 
 
-        <div class="form-actions no-color">
-            @Html.ActionLink("Retornar a Lista", "Index", null, new { @class = "btn btn-primary" })
-            <input type="submit" value="Excluir" class="btn btn-success" />
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                    @Html.HiddenFor(model => model.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Address)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Address)
+                    @Html.HiddenFor(model => model.Address)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ContactName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ContactName)
+                    @Html.HiddenFor(model => model.ContactName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ContactPhone)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ContactPhone)
+                    @Html.HiddenFor(model => model.ContactPhone)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ContactEmail)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ContactEmail)
+                    @Html.HiddenFor(model => model.ContactEmail)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.CNPJ)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CNPJ)
+                    @Html.HiddenFor(model => model.CNPJ)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.StateInscrition)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.StateInscrition)
+                    @Html.HiddenFor(model => model.StateInscrition)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.TownInscrition)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.TownInscrition)
+                    @Html.HiddenFor(model => model.TownInscrition)
+                </dd>
+
+            </dl>
+
+
+            <div class="form-actions no-color">
+                @Html.ActionLink("Retornar a Lista", "Index", null, new { @class = "btn btn-primary" })
+                <input type="submit" value="Excluir" class="btn btn-success" />
+            </div>
         </div>
-    </div>
-}
+    }

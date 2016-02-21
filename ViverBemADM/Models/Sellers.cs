@@ -11,7 +11,7 @@ namespace ViverBemADM.Models
     {
         [Key]
         public int SellersID { get; set; }
-        [DisplayName("Nome")]
+        [DisplayName("Nome do Vendedor")]
         public string SellerName { get; set; }
         [RegularExpression(@"^(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})$", ErrorMessage = "O Telefone está em um formato inválido!")]
         [DisplayName("Telefone")]

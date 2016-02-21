@@ -36,7 +36,7 @@ namespace ViverBemADM.Models
 
         public decimal? PromotionalPrice { get; set; }
 
-        [DisplayName("Nome")]
+        [DisplayName("Nome da Medida")]
         [MaxLength(30, ErrorMessage = "Tamanho máximo excedido!")]
         [Required(ErrorMessage = "Obrigatório informar o Nome")]
 

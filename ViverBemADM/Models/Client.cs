@@ -13,7 +13,7 @@ namespace ViverBemADM.Models
         [Key]
         public int ClientID { get; set; }
 
-        [DisplayName("Nome")]
+        [DisplayName("Nome do Cliente")]
         [Required(ErrorMessage = "Obrigado a informar o Nome do Cliente")]
         public string Name { get; set; }
 

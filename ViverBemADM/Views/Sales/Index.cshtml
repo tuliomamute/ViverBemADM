@@ -1,0 +1,90 @@
+﻿@model IEnumerable<ViverBemADM.Models.Sales>
+
+@{
+    ViewBag.Title = "Início - Vendas";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Inserir Novo", "Create", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NewsPaperSizes.SizeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaymentForm.PaymentFormName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sellers.SellerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SaleValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaymentTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SaleSituation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SellerPercentage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfEdition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YearOfEdition)
+        </th>
+        <th>@Html.Label("Ações")</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Client.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NewsPaperSizes.SizeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentForm.PaymentFormName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sellers.SellerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SaleValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SaleSituation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SellerPercentage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfEdition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YearOfEdition)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.SalesID }, new { @class = "btn btn-success" })
+                @Html.ActionLink("Detalhes", "Details", new { id = item.SalesID }, new { @class = "btn btn-warning" })
+                @Html.ActionLink("Excluir", "Delete", new { id = item.SalesID }, new { @class = "btn btn-danger" })
+
+
+            </td>
+        </tr>
+    }
+
+</table>

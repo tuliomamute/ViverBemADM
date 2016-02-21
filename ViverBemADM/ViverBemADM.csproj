@@ -142,6 +142,7 @@
     <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\NewsPaperSizesController.cs" />
     <Compile Include="Controllers\PaymentFormsController.cs" />
+    <Compile Include="Controllers\SalesController.cs" />
     <Compile Include="Controllers\SellersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -237,6 +238,11 @@
     <Content Include="Views\PaymentForms\Details.cshtml" />
     <Content Include="Views\PaymentForms\Edit.cshtml" />
     <Content Include="Views\PaymentForms\Index.cshtml" />
+    <Content Include="Views\Sales\Create.cshtml" />
+    <Content Include="Views\Sales\Delete.cshtml" />
+    <Content Include="Views\Sales\Details.cshtml" />
+    <Content Include="Views\Sales\Edit.cshtml" />
+    <Content Include="Views\Sales\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,98 @@
+﻿@model ViverBemADM.Models.Sales
+
+@{
+    ViewBag.Title = "Detalhes - Vendas";
+}
+
+<h2>ViewBag.Title</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Client.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewsPaperSizes.SizeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewsPaperSizes.SizeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentForm.PaymentFormName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaymentForm.PaymentFormName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sellers.SellerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sellers.SellerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaymentTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleSituation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleSituation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SellerPercentage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SellerPercentage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfEdition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfEdition)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YearOfEdition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YearOfEdition)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Retornar a Lista", "Index", null, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Editar", "Edit", new { id = Model.SalesID }, new { @class = "btn btn-success" })
+
+</p>

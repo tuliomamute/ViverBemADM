@@ -29,12 +29,14 @@ namespace ViverBemADM.Controllers
         public ActionResult Details(int id)
         {
             var model = viverbembd.Sales.Find(id);
+            CreateDropDownLists();
             return View(model);
         }
 
         // GET: Sales/Create
         public ActionResult Create()
         {
+            CreateDropDownLists();
             return View();
         }
 
@@ -49,6 +51,7 @@ namespace ViverBemADM.Controllers
         public ActionResult Edit(int id)
         {
             var model = viverbembd.Sales.Find(id);
+            CreateDropDownLists();
             return View(model);
         }
 
@@ -69,10 +72,12 @@ namespace ViverBemADM.Controllers
                     return RedirectToAction("Index");
 
                 }
+                CreateDropDownLists();
                 return View();
             }
             catch (Exception ex)
             {
+                CreateDropDownLists();
                 return View();
             }
         }
@@ -91,10 +96,12 @@ namespace ViverBemADM.Controllers
 
                     return RedirectToAction("Index");
                 }
+                CreateDropDownLists();
                 return View();
             }
             catch (Exception ex)
             {
+                CreateDropDownLists();
                 return View();
             }
         }
@@ -117,5 +124,33 @@ namespace ViverBemADM.Controllers
             }
         }
         #endregion
+        private void CreateDropDownLists()
+        {
+            List<SelectListItem> lists;
+
+            lists = new SelectList(viverbembd.Client, "ClientID", "Name").ToList();
+            lists.Insert(0, (new SelectListItem { Text = "-- escolha um cliente --", Value = "" }));
+            ViewBag.ClientID = lists;
+
+
+            lists = new SelectList(viverbembd.NewsPaperSizes, "NewsPaperSizesID", "SizeName").ToList();
+            lists.Insert(0, (new SelectListItem { Text = "-- escolha uma medida --", Value = "" }));
+            ViewBag.NewsPaperSizesID = lists;
+
+
+            lists = new SelectList(viverbembd.PaymentForm, "PaymentFormID", "PaymentFormName").ToList();
+            lists.Insert(0, (new SelectListItem { Text = "-- escolha uma forma de pagamento --", Value = "" }));
+            ViewBag.PaymentFormID = lists;
+
+
+            lists = new SelectList(viverbembd.Sellers, "SellersID", "SellerName").ToList();
+            lists.Insert(0, (new SelectListItem { Text = "-- escolha um vendedor --", Value = "" }));
+            ViewBag.SellersID = lists;
+
+            lists = new SelectList(viverbembd.SalesSituation, "SalesSituationID", "SituationName").ToList();
+            lists.Insert(0, (new SelectListItem { Text = "-- escolha uma situação --", Value = "" }));
+            ViewBag.SellersID = lists;
+
+        }
     }
 }

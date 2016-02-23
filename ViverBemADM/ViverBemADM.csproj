@@ -163,11 +163,20 @@
     <Compile Include="Migrations\201601281500028_AddingNewField_Sellers.Designer.cs">
       <DependentUpon>201601281500028_AddingNewField_Sellers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602222234164_Edit_NotNull_Fields_Sales.cs" />
+    <Compile Include="Migrations\201602222234164_Edit_NotNull_Fields_Sales.Designer.cs">
+      <DependentUpon>201602222234164_Edit_NotNull_Fields_Sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602230050595_Add_Table_SalesSituation.cs" />
+    <Compile Include="Migrations\201602230050595_Add_Table_SalesSituation.Designer.cs">
+      <DependentUpon>201602230050595_Add_Table_SalesSituation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\NewsPaperSizes.cs" />
     <Compile Include="Models\PaymentForm.cs" />
     <Compile Include="Models\Sales.cs" />
+    <Compile Include="Models\SalesSituation.cs" />
     <Compile Include="Models\Sellers.cs" />
     <Compile Include="Models\ViverBemADMContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -263,6 +272,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201601281500028_AddingNewField_Sellers.resx">
       <DependentUpon>201601281500028_AddingNewField_Sellers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602222234164_Edit_NotNull_Fields_Sales.resx">
+      <DependentUpon>201602222234164_Edit_NotNull_Fields_Sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602230050595_Add_Table_SalesSituation.resx">
+      <DependentUpon>201602230050595_Add_Table_SalesSituation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -30,7 +30,7 @@
             @Html.DisplayNameFor(model => model.PaymentTime)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.SaleSituation)
+            @Html.DisplayNameFor(model => model.SalesSituation.SituationName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.SellerPercentage)
@@ -66,7 +66,7 @@
                 @Html.DisplayFor(modelItem => item.PaymentTime)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.SaleSituation)
+                @Html.DisplayFor(modelItem => model.SalesSituation.SituationName)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.SellerPercentage)

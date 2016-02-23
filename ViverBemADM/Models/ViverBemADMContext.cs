@@ -19,5 +19,6 @@ namespace ViverBemADM.Models
         public DbSet<PaymentForm> PaymentForm { get; set; }
         public DbSet<Sales> Sales { get; set; }
         public DbSet<Sellers> Sellers { get; set; }
+        public DbSet<SalesSituation> SalesSituation { get; set; }
     }
 }

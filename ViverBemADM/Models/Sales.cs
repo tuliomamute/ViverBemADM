@@ -21,7 +21,8 @@ namespace ViverBemADM.Models
 
         [DisplayName("Prazo de Pagamento")]
         [Required(ErrorMessage = "Obrigatório informar o Prazo de Pagamento")]
-        public int PaymentTime { get; set; }
+        [Column(TypeName = "Date")]
+        public DateTime? PaymentTime { get; set; }
 
         [Required(ErrorMessage = "Obrigatório informar o % de Comissão")]
         [DisplayName("% de Comissão")]
@@ -61,9 +62,9 @@ namespace ViverBemADM.Models
 
         [Required(ErrorMessage = "Obrigatório informar a Situação da Venda")]
         [DisplayName("Situação da Venda")]
-        public int SaleSituationID { get; set; }
+        public int SalesSituationID { get; set; }
 
-        [ForeignKey("SaleSituationID")]
+        [ForeignKey("SalesSituationID")]
         public virtual SalesSituation SalesSituation { get; set; }
 
 

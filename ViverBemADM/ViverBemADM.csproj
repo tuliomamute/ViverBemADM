@@ -171,6 +171,18 @@
     <Compile Include="Migrations\201602230050595_Add_Table_SalesSituation.Designer.cs">
       <DependentUpon>201602230050595_Add_Table_SalesSituation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602232306349_Change_Column_Name.cs" />
+    <Compile Include="Migrations\201602232306349_Change_Column_Name.Designer.cs">
+      <DependentUpon>201602232306349_Change_Column_Name.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602232321088_Change_PaymentTime_Type.cs" />
+    <Compile Include="Migrations\201602232321088_Change_PaymentTime_Type.Designer.cs">
+      <DependentUpon>201602232321088_Change_PaymentTime_Type.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602240047541_Change_To_Date.cs" />
+    <Compile Include="Migrations\201602240047541_Change_To_Date.Designer.cs">
+      <DependentUpon>201602240047541_Change_To_Date.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\NewsPaperSizes.cs" />
@@ -278,6 +290,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602230050595_Add_Table_SalesSituation.resx">
       <DependentUpon>201602230050595_Add_Table_SalesSituation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602232306349_Change_Column_Name.resx">
+      <DependentUpon>201602232306349_Change_Column_Name.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602232321088_Change_PaymentTime_Type.resx">
+      <DependentUpon>201602232321088_Change_PaymentTime_Type.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602240047541_Change_To_Date.resx">
+      <DependentUpon>201602240047541_Change_To_Date.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

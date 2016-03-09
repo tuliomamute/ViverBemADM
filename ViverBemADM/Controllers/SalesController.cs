@@ -149,7 +149,7 @@ namespace ViverBemADM.Controllers
 
             lists = new SelectList(viverbembd.SalesSituation, "SalesSituationID", "SituationName").ToList();
             lists.Insert(0, (new SelectListItem { Text = "-- escolha uma situação --", Value = "" }));
-            ViewBag.SellersID = lists;
+            ViewBag.SalesSituationID = lists;
 
         }
     }

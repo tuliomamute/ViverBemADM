@@ -1,0 +1,35 @@
+﻿@model ViverBemADM.Models.SalesSituation
+
+@{
+    ViewBag.Title = "Excluir - Situação de Venda";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<h3>Tem certeza que deseja deletar essa situação de venda?</h3>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            @Html.HiddenFor(model => model.SalesSituationID)
+            <dt>
+                @Html.DisplayNameFor(model => model.SituationName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SituationName)
+                @Html.HiddenFor(model => model.SituationName)
+            </dd>
+
+        </dl>
+
+        <div class="form-actions no-color">
+            @Html.ActionLink("Retornar a Lista", "Index", null, new { @class = "btn btn-primary" })
+            <input type="submit" value="Excluir" class="btn btn-success" />
+        </div>
+
+    </div>
+}

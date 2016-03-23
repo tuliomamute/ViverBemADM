@@ -1,0 +1,25 @@
+﻿@model ViverBemADM.Models.SalesSituation
+
+@{
+    ViewBag.Title = "Detalhes - Situação de Vendas";
+}
+
+<h2>@ViewBag.Title</h2>
+<div>
+    <h4>SalesSituation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SituationName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SituationName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Retornar a Lista", "Index", null, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Editar", "Edit", new { id = Model.SalesSituationID }, new { @class = "btn btn-success" })
+</p>
